@@ -5,6 +5,7 @@ from django.http import HttpResponse
 filepath, extension = os.path.splitext(__file__)
 
 ROOT_URLCONF = os.path.basename(filepath)
+
 sys.path.append("..")
 
 DATABASES = {
@@ -15,10 +16,10 @@ DATABASES = {
 }
 
 
-INSTALLED_APPS = (os.path.basename(filepath),)
+INSTALLED_APPS = (os.path.split(os.path.split(__file__)[0])[1],)
 
 def view (request):
-   return HttpResponse("HI!")
+   return HttpResponse(len(request.GET.getlist("a")))
 
 urlpatterns = patterns('', (r'^$', view))
 
