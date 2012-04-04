@@ -3,7 +3,7 @@
 This is a simple django project meant to quickly test or prototype something in Django. The settings file serves as the main urls file and view file. 
 Features:
 
-* No separate app directory. The template directory itself will be put on the PYTHONPATH and serve as an app directory.
+* No separate app directory. The root directory itself will be put on the PYTHONPATH and serve as an app directory.
 * Two bash scripts to setup the necessary environment variables and run the django test server or django tests. They must be run from the directory they are contained in.
 
 A couple of things:
