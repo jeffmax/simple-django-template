@@ -1,2 +1,2 @@
 #!/bin/sh
-uwsgi configs/local.ini
+uwsgi server/uwsgi/local.ini
