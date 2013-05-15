@@ -1,6 +1,6 @@
 # Simple Django Project Template
 
-This is a simple django project meant to quickly test or prototype something in Django. The settings file serves as the main urls file and view file.
+This is a simple django project meant to quickly test or prototype something in Django. 
 
 #### Quick start
     virtualenv test_env
@@ -13,12 +13,18 @@ This is a simple django project meant to quickly test or prototype something in 
     
 Navigate to `http://localhost:8000` and you should see `OK`.
 
-#### Features:
+### Features
+#### Single directory
+No separate app directory. The root directory itself will be put on the PYTHONPATH and serve as an app directory.
 
-* No separate app directory. The root directory itself will be put on the PYTHONPATH and serve as an app directory.
-* Two bash scripts to setup the necessary environment variables and run a django test server (now uses uwsgi, not runserver) and run django tests. The runtests.sh must be run from the directory it resides in for PYTHONPATH reasons.
+#### Combined urls/settings/views file
+The settings file serves as the main urls file and views file to make everything as simple as possible. *They should probably be broken out for anything but a trivial app.*
 
-#### A couple of things:
+#### Convenience scripts
+* run-server.sh: setup the necessary environment variables and run a django test server (now uses uwsgi, not runserver) 
+* run-tests.sh: setup the necesseary environment variables and run django tests. Must be run from the directory it resides in for PYTHONPATH reasons.
+
+### Notes
 
 * The settings file is setup to use a sqlite3 database to make the django TestCase happy.
 * There is an empty models.py file because the django testrunner insists on finding one or it will not find your tests.py.
