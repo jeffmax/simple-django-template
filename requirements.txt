@@ -7,3 +7,4 @@
 # Core requirements
 django>=1.5
 uWSGI
+ipython
