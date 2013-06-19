@@ -17,9 +17,6 @@ Navigate to `http://localhost:8000` and you should see `OK`.
 #### Single directory
 No separate app directory. The root directory itself will be put on the PYTHONPATH and serve as an app directory.
 
-#### Combined urls/settings/views file
-The settings file serves as the main urls file and views file to make everything as simple as possible. *They should probably be broken out for anything but a trivial app.*
-
 #### Convenience scripts
 * run-server.sh: setup the necessary environment variables and run a django test server (now uses uwsgi, not runserver) 
 * run-tests.sh: setup the necesseary environment variables and run django tests. Must be run from the directory it resides in for PYTHONPATH reasons.
