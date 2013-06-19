@@ -8,3 +8,4 @@
 django>=1.5
 uWSGI
 ipython
+unipath
